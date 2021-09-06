@@ -1,0 +1,20 @@
+{
+  "name": "social-test-server",
+  "version": "1.0.0",
+  "main": "build/server.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc --build",
+    "start": "node build/server.js"
+  },
+  "dependencies": {
+    "@social-colyseus/server": "^0.4.1"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "ts-node": "^8.1.0",
+    "ts-node-dev": "^1.0.0-pre.63",
+    "typescript": "^3.4.5"
+  }
+}
