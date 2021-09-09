@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv';
 import cors from 'cors';
 import {createServer} from 'http';
 import {Server} from 'colyseus';
+import {PrivateRoom} from './rooms/private.room';
 import {WebSocketTransport} from '@colyseus/ws-transport';
 import {SocialColyseusApp} from '@social-colyseus/server';
 
@@ -31,5 +32,6 @@ const socialApp = new SocialColyseusApp(gameServer, {
 });
 app.use('/', express.static('src/static'));
 app.use(socialApp.httpHandler(['/']));
+socialApp.defineRoom('privateRoom', PrivateRoom);
 
 gameServer.listen(5567, '0.0.0.0').finally();
