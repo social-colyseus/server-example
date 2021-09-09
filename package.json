@@ -9,7 +9,7 @@
     "start": "node build/server.js"
   },
   "dependencies": {
-    "@social-colyseus/server": "^0.4.1"
+    "@social-colyseus/server": "^0.4.3"
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
